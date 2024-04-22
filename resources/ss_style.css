@@ -1,0 +1,119 @@
+.side_vbox {
+  -fx-background-color: #f7f7f7;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+.Hbox{
+      -fx-background-color: #f7f7f7;
+      -fx-border-color: #ddd;
+      -fx-border-width: 1px;
+      -fx-border-style: solid;
+      -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+#details_pane{
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+#graph_pane{
+ -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.chart-area {
+  fill: #007bff;
+  fill-opacity: 0.8;
+}
+
+.chart-line {
+  stroke: #007bff;
+  stroke-width: 2;
+  fill: none;
+}
+
+.chart-axis {
+  stroke: #ccc;
+  stroke-width: 1;
+}
+
+.chart-axis-label {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  fill: #555;
+}
+
+.chart-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.chart-tooltip.visible {
+  opacity: 1;
+}
+
+.button {
+  -fx-font-family: Arial, sans-serif;
+  -fx-font-size: 12px;
+  -fx-text-fill: #000;
+  -fx-background-color: #F1E8E8;
+  -fx-background-radius: 4px;
+  -fx-border: none;
+  -fx-cursor: pointer;
+  -fx-transition-duration: 0.3s;
+  -fx-box-shadow: 0px 2px 10px rgba(0, 0, 10, 0.2);
+}
+
+.button:hover {
+  -fx-background-color: #dcdcdc;
+  -fx-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  -fx-background-color: #c0c0c0;
+  -fx-box-shadow: none;
+  -fx-translate-y: 1px;
+}
+.image-view {
+    -fx-fit-height: 20px;
+    -fx-fit-width: 20px;
+    -fx-preserve-ratio: true;
+}
+
+#holdings_pane{
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+
+}

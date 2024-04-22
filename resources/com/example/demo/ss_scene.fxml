@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoardController">
+   <children>
+      <VBox prefHeight="697.0" prefWidth="203.0">
+         <children>
+            <AnchorPane fx:id="side_ankerpane" prefHeight="697.0" prefWidth="229.0">
+               <children>
+                  <Button fx:id="dashboard_button" layoutY="104.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="201.0" text="Dashboard" textAlignment="RIGHT">
+                     <graphic>
+                        <ImageView fx:id="dashboard_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Users/adamt/Documents/UM%20degree/y1s2/DATA%20STRUC/Asssignment/GUI%20image/25694.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="SS_button" layoutY="203.0" mnemonicParsing="false" onAction="#switchtoSS" prefHeight="39.0" prefWidth="201.0" text="Stock Search" textAlignment="RIGHT">
+                     <graphic>
+                        <ImageView fx:id="ss_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Users/adamt/Documents/UM%20degree/y1s2/DATA%20STRUC/Asssignment/GUI%20image/search-icon-png-9969.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="leaderboard_button" layoutY="302.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="201.0" text="Leaderboard" textAlignment="RIGHT">
+                     <graphic>
+                        <ImageView fx:id="leaderboard_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Users/adamt/Documents/UM%20degree/y1s2/DATA%20STRUC/Asssignment/GUI%20image/4489655.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="report_button" layoutY="402.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="201.0" text="Report" textAlignment="RIGHT">
+                     <graphic>
+                        <ImageView fx:id="report_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Users/adamt/Documents/UM%20degree/y1s2/DATA%20STRUC/Asssignment/GUI%20image/2830510.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="admin_button" layoutY="489.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="201.0" text="Admin">
+                     <graphic>
+                        <ImageView fx:id="admin_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Users/adamt/Documents/UM%20degree/y1s2/DATA%20STRUC/Asssignment/GUI%20image/icon-admin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

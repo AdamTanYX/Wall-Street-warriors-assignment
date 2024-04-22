@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="HBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1457.0" styleClass="Hbox" stylesheets="@ss_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WallStreetGUI.ssController">
+    <children>
+        <VBox fx:id="side_vbox" prefHeight="792.0" prefWidth="203.0" styleClass="side_vbox" stylesheets="@ss_style.css">
+         <children>
+                <AnchorPane fx:id="side_ankerpane" prefHeight="812.0" prefWidth="159.0">
+                    <children>
+                        <Button fx:id="dashboard_button" layoutY="104.0" mnemonicParsing="false" onAction="#switchtoDashboard" prefHeight="39.0" prefWidth="201.0" text="Dashboard" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="dashboard_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/25694.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="SS_button" layoutY="203.0" mnemonicParsing="false" onAction="#switchtoSS" prefHeight="39.0" prefWidth="201.0" text="Trading Dashboard" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="ss_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/245904.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="leaderboard_button" layoutY="302.0" mnemonicParsing="false" onAction="#switchtoLeaderboard" prefHeight="39.0" prefWidth="201.0" text="Leaderboard" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="leaderboard_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/4489655.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="report_button" layoutY="402.0" mnemonicParsing="false" onAction="#switchtoReport" prefHeight="39.0" prefWidth="201.0" text="Report" textAlignment="RIGHT">
+                     <graphic>
+                                <ImageView fx:id="report_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/2830510.png" />
+                           </image>
+                                </ImageView>
+                     </graphic></Button>
+                        <Button fx:id="admin_button" layoutY="489.0" mnemonicParsing="false" onAction="#switchtoAdmin" prefHeight="39.0" prefWidth="201.0" text="Admin">
+                     <graphic>
+                                <ImageView fx:id="admin_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/icon-admin.png" />
+                           </image>
+                                </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="logout_button" layoutX="72.0" layoutY="699.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="58.0">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </AnchorPane>
+         </children>
+        </VBox>
+      <AnchorPane fx:id="searchfield" prefHeight="830.0" prefWidth="1280.0">
+         <children>
+            <Pane fx:id="graph_pane" layoutX="6.0" layoutY="20.0" prefHeight="459.0" prefWidth="704.0">
+               <children>
+                  <AreaChart fx:id="graph" horizontalGridLinesVisible="false" layoutY="38.0" onMouseMoved="#displayTooltip" prefHeight="395.0" prefWidth="704.0" verticalGridLinesVisible="false">
+                    <xAxis>
+                      <CategoryAxis endMargin="0.0" gapStartAndEnd="false" label="Time" startMargin="0.0" tickLabelGap="1.0" tickLabelRotation="90.0" tickLabelsVisible="false" tickLength="1.0" fx:id="x_axis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="y_axis" autoRanging="false" label="Price(RM)" minorTickCount="10" side="LEFT" tickLength="5.0" tickUnit="0.1" upperBound="5.0" />
+                    </yAxis>
+                  </AreaChart>
+                  <Button fx:id="graph_1d" layoutX="488.0" layoutY="2.0" mnemonicParsing="false" onAction="#button_1d" prefHeight="36.0" prefWidth="59.0" text="1d">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+                  <Button fx:id="graph_7d" layoutX="537.0" layoutY="2.0" mnemonicParsing="false" onAction="#button_7d" prefHeight="36.0" prefWidth="59.0" text="7d">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+                  <Button fx:id="graph_1m" layoutX="587.0" layoutY="2.0" mnemonicParsing="false" onAction="#button_1m" prefHeight="36.0" prefWidth="67.0" text="30d">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+                  <Button fx:id="graph_2m" layoutX="637.0" layoutY="2.0" mnemonicParsing="false" onAction="#button_2m" prefHeight="36.0" prefWidth="67.0" text="60d">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+                  <Pane fx:id="companyName_pane" layoutX="39.0" layoutY="14.0" prefHeight="35.0" prefWidth="449.0">
+                     <children>
+                        <Label fx:id="companyName_field" layoutX="77.0" layoutY="4.0" prefHeight="27.0" prefWidth="281.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="companyName_label" layoutX="19.0" layoutY="4.0" prefHeight="25.0" prefWidth="143.0" text="Name:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="companySymbol_label" layoutX="358.0" layoutY="5.0" prefHeight="27.0" prefWidth="90.0" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="technicalGraph_button" layoutX="332.0" layoutY="427.0" mnemonicParsing="false" onAction="#technicalGraph" text="In-depth">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <AnchorPane fx:id="search_box" layoutX="770.0" layoutY="26.0" prefHeight="47.0" prefWidth="301.0">
+               <children>
+                  <TextField fx:id="stockSearch_field" alignment="CENTER" layoutY="2.0" onAction="#getSymbol" prefHeight="35.0" prefWidth="228.0" promptText="Stock Search">
+                     <effect>
+                        <DropShadow />
+                     </effect></TextField>
+                  <Button layoutX="228.0" layoutY="1.0" mnemonicParsing="false" onAction="#getSymbol" prefHeight="35.0" prefWidth="45.0">
+                     <graphic>
+                        <ImageView fx:id="searchBox_image" fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/search-icon-png-9969.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="trade_pane" layoutX="6.0" layoutY="512.0" prefHeight="295.0" prefWidth="506.0">
+               <children>
+                  <Label fx:id="trade_label" layoutX="4.0" layoutY="2.0" text="Trade">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TabPane fx:id="trade_tab" layoutX="-3.0" layoutY="36.0" prefHeight="250.0" prefWidth="506.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="buy_tab" text="Buy">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane fx:id="buyPrice_pane" layoutX="8.0" layoutY="27.0" prefHeight="92.0" prefWidth="282.0">
+                                       <children>
+                                          <Label fx:id="buyPrice_label" layoutX="12.0" layoutY="7.0" prefHeight="24.0" prefWidth="65.0" text="Price">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="buyPrice_field" layoutX="14.0" layoutY="36.0">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect></TextField>
+                                          <ChoiceBox fx:id="price_select" layoutX="50.0" layoutY="7.0" prefHeight="25.0" prefWidth="113.0">
+                                             <effect>
+                                                <Blend />
+                                             </effect></ChoiceBox>
+                                          <Label fx:id="BuysuggestedPrice" layoutX="14.0" layoutY="70.0" text="Suggested Price:" />
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="buyVolume_pane" layoutX="8.0" layoutY="130.0" prefHeight="38.0" prefWidth="282.0">
+                                       <children>
+                                          <Label fx:id="buyVolume_label" layoutX="12.0" layoutY="7.0" prefHeight="24.0" prefWidth="65.0" text="Volume">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="buyVolume_field" layoutX="88.0" layoutY="7.0">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect></TextField>
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="buy_button" layoutX="363.0" layoutY="76.0" mnemonicParsing="false" onAction="#buy" prefHeight="47.0" prefWidth="68.0" text="Buy">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="sell_tab" text="Sell">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane fx:id="sellVolume_pane" layoutX="14.0" layoutY="129.0" prefHeight="38.0" prefWidth="282.0">
+                                       <children>
+                                          <Label fx:id="sellVolume_label" layoutX="12.0" layoutY="7.0" prefHeight="24.0" prefWidth="65.0" text="Volume">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="sellVolume_field" layoutX="100.0" layoutY="8.0">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect></TextField>
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="sell_button" layoutX="369.0" layoutY="79.0" mnemonicParsing="false" onAction="#sell" prefHeight="43.0" prefWidth="60.0" text="Sell">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></Button>
+                                    <Pane fx:id="sellPrice_pane" layoutX="14.0" layoutY="25.0" prefHeight="92.0" prefWidth="282.0">
+                                       <children>
+                                          <Label fx:id="sellPrice_label" layoutX="12.0" layoutY="7.0" prefHeight="24.0" prefWidth="65.0" text="Price">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="sellPrice_field" layoutX="14.0" layoutY="36.0">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect></TextField>
+                                          <ChoiceBox fx:id="sellPrice_select" layoutX="50.0" layoutY="7.0" prefHeight="25.0" prefWidth="113.0" />
+                                          <Label fx:id="SellsuggestedPrice" layoutX="14.0" layoutY="70.0" text="Suggested Price:" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Button fx:id="lot100_button" layoutX="406.0" layoutY="1.0" mnemonicParsing="false" onAction="#lot100" prefHeight="29.0" prefWidth="97.0" text="500-lot Pool">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="details_pane" layoutX="718.0" layoutY="86.0" prefHeight="364.0" prefWidth="272.0">
+               <children>
+                  <Pane layoutX="5.0" layoutY="14.0" prefHeight="313.0" prefWidth="269.0">
+                     <children>
+                        <Pane fx:id="currentPrice_pane" layoutX="6.0" layoutY="14.0" prefHeight="85.0" prefWidth="254.0">
+                           <children>
+                              <Label fx:id="currentPrice_panel" contentDisplay="CENTER" layoutX="14.0" layoutY="11.0" prefHeight="64.0" prefWidth="84.0" textAlignment="RIGHT">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="currentPrice_change" layoutX="80.0" layoutY="14.0" prefHeight="64.0" prefWidth="160.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="volume_pane" layoutX="-1.0" layoutY="105.0" prefHeight="35.0" prefWidth="269.0">
+                           <children>
+                              <Label fx:id="volume_label" layoutX="16.0" layoutY="4.0" prefHeight="25.0" prefWidth="143.0" text="Volume ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="volume_panel" layoutX="95.0" layoutY="5.0" prefHeight="25.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="currentPrice_pane" layoutX="-1.0" layoutY="149.0" prefHeight="35.0" prefWidth="263.0">
+                           <children>
+                              <Label fx:id="open_label" layoutX="14.0" layoutY="5.0" prefHeight="25.0" prefWidth="143.0" text="Open">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="open_panel" layoutX="95.0" layoutY="5.0" prefHeight="25.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="high_pane" layoutX="-1.0" layoutY="193.0" prefHeight="36.0" prefWidth="269.0">
+                           <children>
+                              <Label fx:id="high_label" layoutX="16.0" layoutY="4.0" prefHeight="25.0" prefWidth="143.0" text="High">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="high_panel" layoutX="95.0" layoutY="5.0" prefHeight="25.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="low_pane" layoutX="-1.0" layoutY="237.0" prefHeight="35.0" prefWidth="263.0">
+                           <children>
+                              <Label fx:id="low_label" layoutX="16.0" layoutY="4.0" prefHeight="25.0" prefWidth="143.0" text="Low">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="low_panel" layoutX="97.0" layoutY="2.0" prefHeight="25.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Button fx:id="details_button" layoutX="98.0" layoutY="315.0" mnemonicParsing="false" onAction="#webViewPopup" prefHeight="35.0" prefWidth="84.0" text="Details">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+                  <Button fx:id="refresh_button" layoutX="120.0" layoutY="-15.0" mnemonicParsing="false" onAction="#refresh" prefHeight="19.0" prefWidth="31.0">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/refresh-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="512.0" layoutY="531.0" prefHeight="279.0" prefWidth="281.0">
+               <children>
+                  <TextArea fx:id="trade_status" layoutY="27.0" prefHeight="250.0" prefWidth="281.0" />
+                  <Label layoutX="14.0" layoutY="6.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="checkPending_button" layoutX="94.0" layoutY="-15.0" mnemonicParsing="false" onAction="#checkPendingButton" prefHeight="31.0" prefWidth="105.0" text="Check Pending ">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pOrder_pane" layoutX="801.0" layoutY="521.0" prefHeight="279.0" prefWidth="449.0">
+               <children>
+                  <Label fx:id="pOrder_label" layoutX="14.0" layoutY="6.0" text="Pending Orders">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <TableView fx:id="pOrder_table" layoutY="29.0" prefHeight="270.0" prefWidth="449.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="date_column" prefWidth="115.0" text="Date" />
+                        <TableColumn fx:id="symbol_column" prefWidth="56.0" text="Symbol" />
+                        <TableColumn fx:id="type_column" prefWidth="56.0" text="Type" />
+                        <TableColumn fx:id="price_column" prefWidth="61.0" text="Price" />
+                        <TableColumn fx:id="volume_column" prefWidth="64.0" text="Volume" />
+                        <TableColumn fx:id="cancel_column" prefWidth="83.0" />
+                     </columns>
+                  </TableView>
+                  <ChoiceBox fx:id="pOrder_selector" layoutX="299.0" layoutY="3.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="stockList_button" layoutX="1064.0" layoutY="26.0" mnemonicParsing="false" onAction="#displayStocks" prefHeight="29.0" prefWidth="76.0" text="Stock List">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+            <Button fx:id="news_button" layoutX="1157.0" layoutY="25.0" mnemonicParsing="false" onAction="#newsPopup" prefHeight="31.0" prefWidth="60.0" text="News">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+            <AnchorPane fx:id="holdings_pane" layoutX="992.0" layoutY="89.0" prefHeight="358.0" prefWidth="254.0">
+               <children>
+                  <TableView fx:id="holdings_table" layoutX="7.0" layoutY="27.0" prefHeight="313.0" prefWidth="239.0">
+                    <columns>
+                      <TableColumn fx:id="hSymbol_column" prefWidth="82.0" text="Symbol" />
+                      <TableColumn fx:id="hVolume_column" prefWidth="82.0" text="Volume" />
+                        <TableColumn fx:id="hBuyPrice_column" prefWidth="79.0" text="BuyPrice" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="holdings_label" layoutX="97.0" layoutY="4.0" text="Holdings">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="hRefresh_button" layoutX="111.0" layoutY="347.0" mnemonicParsing="false" onAction="#getHoldings" prefHeight="12.0" prefWidth="20.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/refresh-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+    </children>
+</HBox>

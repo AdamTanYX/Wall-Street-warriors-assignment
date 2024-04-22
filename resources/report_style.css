@@ -1,0 +1,83 @@
+.HBox {
+    -fx-background-color: #f7f7f7;
+    -fx-padding: 20px;
+}
+
+.VBox {
+    -fx-background-color: #f7f7f7;
+    -fx-padding: 20px;
+}
+
+.AnchorPane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.Button {
+    -fx-font-family: Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-background-color: #F1E8E8;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px 20px;
+    -fx-border: none;
+    -fx-cursor: pointer;
+    -fx-transition-duration: 0.3s;
+    -fx-box-shadow: 0px 2px 10px rgba(0, 0, 10, 0.2);
+}
+
+.Button:hover {
+    -fx-background-color: #0056b3;
+    -fx-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Button:active {
+    -fx-background-color: #003080;
+    -fx-box-shadow: none;
+    -fx-translate-y: 1px;
+}
+
+.ImageView {
+    -fx-fit-height: 20px;
+    -fx-fit-width: 20px;
+    -fx-preserve-ratio: true;
+}
+
+.Label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
+}
+
+.ChoiceBox {
+    -fx-font-size: 14px;
+    -fx-background-color: #fff;
+    -fx-padding: 5px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.ChoiceBox:hover {
+    -fx-border-color: #aaa;
+}
+
+.ChoiceBox:pressed {
+    -fx-border-color: #777;
+}
+
+#dashboard_button,#SS_button,#leaderboard_button,#report_button,#admin_button,#logout_button{
+ -fx-font-family: Arial, sans-serif;
+  -fx-font-size: 14px;
+  -fx-text-fill: #000;
+  -fx-background-color: #F1E8E8;
+  -fx-background-radius: 4px;
+  -fx-padding: 10px 20px;
+  -fx-border: none;
+  -fx-cursor: pointer;
+  -fx-transition-duration: 0.3s;
+  -fx-box-shadow: 0px 2px 10px rgba(0, 0, 10, 0.2);
+}

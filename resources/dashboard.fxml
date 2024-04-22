@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="Hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="912.0" prefWidth="1298.0" stylesheets="@dashboard_style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WallStreetGUI.DashBoardController">
+    <children>
+        <VBox fx:id="VBox" prefHeight="697.0" prefWidth="203.0">
+            <children>
+                <AnchorPane fx:id="side_ankerpane" prefHeight="913.0" prefWidth="202.0">
+                    <children>
+                        <Button fx:id="dashboard_button" layoutY="104.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="201.0" text="Dashboard" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="dashboard_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/25694.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="SS_button" layoutY="203.0" mnemonicParsing="false" onAction="#switchtoSS" prefHeight="39.0" prefWidth="201.0" text="Trading Dashboard" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="ss_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/245904.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="leaderboard_button" layoutY="302.0" mnemonicParsing="false" onAction="#switchtoLeaderboard" prefHeight="39.0" prefWidth="201.0" text="Leaderboard" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="leaderboard_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/4489655.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="report_button" layoutY="402.0" mnemonicParsing="false" onAction="#switchtoReport" prefHeight="39.0" prefWidth="201.0" text="Report" textAlignment="RIGHT">
+                            <graphic>
+                                <ImageView fx:id="report_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/2830510.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="admin_button" layoutX="1.0" layoutY="495.0" mnemonicParsing="false" onAction="#switchtoAdmin" prefHeight="39.0" prefWidth="201.0" text="Admin">
+                            <graphic>
+                                <ImageView fx:id="admin_image" fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/icon-admin.png" />
+                           </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                  <Button fx:id="logout_button" layoutX="56.0" layoutY="676.0" mnemonicParsing="false" onAction="#logout" prefHeight="36.0" prefWidth="58.0">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@GUI%20image/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </AnchorPane>
+            </children>
+        </VBox>
+      <AnchorPane fx:id="background_pane" prefHeight="912.0" prefWidth="1103.0">
+         <children>
+            <AnchorPane fx:id="name_pane" layoutX="56.0" layoutY="53.0" prefHeight="68.0" prefWidth="754.0">
+               <children>
+                  <Label fx:id="name_label" layoutX="153.0" layoutY="19.0" prefHeight="36.0" prefWidth="273.0" text="adsad">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <ImageView fx:id="name_pic" fitHeight="74.0" fitWidth="58.0" layoutX="40.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@GUI%20image/communityIcon_cho9chd8ug431.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="qualification_label" layoutX="463.0" layoutY="29.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="info_pane" layoutX="49.0" layoutY="169.0" prefHeight="242.0" prefWidth="939.0">
+               <children>
+                  <Pane fx:id="balance_pane" layoutX="29.0" layoutY="34.0" prefHeight="156.0" prefWidth="169.0">
+                     <children>
+                        <Label fx:id="balance_label" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="96.0" text="Balance">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="balanceNo" layoutX="42.0" layoutY="60.0" prefHeight="36.0" prefWidth="86.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Pane fx:id="PL_pane" layoutX="241.0" layoutY="34.0" prefHeight="156.0" prefWidth="169.0">
+                     <children>
+                        <Label fx:id="PL_label" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="96.0" text="P/L">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="plNo" layoutX="42.0" layoutY="60.0" prefHeight="36.0" prefWidth="86.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Pane fx:id="points_pane" layoutX="470.0" layoutY="34.0" prefHeight="156.0" prefWidth="169.0">
+                     <children>
+                        <Label fx:id="point_label" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="96.0" text="Points">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pointsNo" layoutX="42.0" layoutY="60.0" prefHeight="36.0" prefWidth="86.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Pane fx:id="position_pane" layoutX="707.0" layoutY="34.0" prefHeight="156.0" prefWidth="169.0">
+                     <children>
+                        <Label fx:id="position_label" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="96.0" text="Position">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="positionNo" layoutX="42.0" layoutY="60.0" prefHeight="36.0" prefWidth="86.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="history_pane" layoutX="489.0" layoutY="456.0" prefHeight="386.0" prefWidth="543.0">
+               <children>
+                  <TableView fx:id="history_table" layoutX="11.0" layoutY="31.0" prefHeight="358.0" prefWidth="543.0" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn fx:id="Hdate" prefWidth="121.0" text="Date" />
+                      <TableColumn fx:id="Hsymbol" prefWidth="82.0" text="Symbol" />
+                        <TableColumn fx:id="Hprice" prefWidth="84.0" text="Price" />
+                        <TableColumn fx:id="Hvolume" prefWidth="82.0" text="Volume" />
+                        <TableColumn fx:id="Htype" prefWidth="74.0" text="Type" />
+                        <TableColumn fx:id="Hposition" prefWidth="91.0" text="Position" />
+                    </columns>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+                  <Label fx:id="history_label" layoutX="14.0" layoutY="6.0" text="Trade History" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="HP_pane" layoutX="25.0" layoutY="450.0" prefHeight="386.0" prefWidth="409.0">
+               <children>
+                  <TabPane fx:id="HP_tab" layoutX="8.0" layoutY="11.0" prefHeight="387.0" prefWidth="415.0">
+                     <tabs>
+                        <Tab text="Holdings">
+                           <content>
+                              <TableView fx:id="holdings_table" prefHeight="358.0" prefWidth="408.0" tableMenuButtonVisible="true">
+                                 <columns>
+                                    <TableColumn fx:id="HOsymbol" prefWidth="130.0" text="Symbol" />
+                                    <TableColumn fx:id="HOvolume" prefWidth="131.0" text="Volume" />
+                                    <TableColumn fx:id="HOprice" prefWidth="144.0" text="LatestBuyingPrice" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </Tab>
+                        <Tab text="Pending Order">
+                           <content>
+                              <TableView fx:id="pOrder_table" prefHeight="358.0" prefWidth="408.0" tableMenuButtonVisible="true">
+                                <columns>
+                                  <TableColumn fx:id="Pdate" prefWidth="109.0" text="Date" />
+                                  <TableColumn fx:id="Psymbol" prefWidth="66.0" text="Symbol" />
+                                    <TableColumn fx:id="Ptype" prefWidth="76.0" text="Type" />
+                                    <TableColumn fx:id="Pprice" prefWidth="78.0" text="Price" />
+                                    <TableColumn fx:id="Pvolume" prefWidth="75.0" text="Volume" />
+                                </columns>
+                              </TableView>
+                           </content>
+                        </Tab>
+                     </tabs>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TabPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <ToggleButton fx:id="noti_button" layoutX="833.0" layoutY="75.0" mnemonicParsing="false" onAction="#notiButton" text="Notification">
+               <effect>
+                  <DropShadow />
+               </effect></ToggleButton>
+            <Label fx:id="noti_label" layoutX="862.0" layoutY="53.0" text="Notification" />
+         </children>
+      </AnchorPane>
+    </children>
+</HBox>
